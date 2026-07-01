@@ -1,0 +1,36 @@
+openapi: 3.0.1
+info:
+  title: Production REST API Principles - Orders API (sample)
+  version: 1.0.0
+servers:
+  - url: https://localhost:5001
+paths:
+  /api/v1/orders:
+    get:
+      summary: List orders (paged)
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an order
+      responses:
+        '201':
+          description: Created
+  /api/v1/orders/{id}:
+    get:
+      summary: Get order by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v1/orders/{id}/cancellation:
+    post:
+      summary: Request cancellation for an order
+      responses:
+        '202':
+          description: Accepted
