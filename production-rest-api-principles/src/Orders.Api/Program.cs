@@ -55,6 +55,9 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Idempotency middleware (ensures POST /api/v1/orders respects Idempotency-Key)
+app.UseMiddleware<Orders.Api.Middleware.IdempotencyMiddleware>();
+
 app.MapControllers();
 
 app.Run();
