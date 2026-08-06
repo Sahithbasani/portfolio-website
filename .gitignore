@@ -8,6 +8,12 @@
 ## Build results
 bin/
 obj/
+.next/
+node_modules/
+coverage/
+*.tsbuildinfo
+.env*
+!.env.example
 
 ## Rider
 .idea/
@@ -32,3 +38,5 @@ TestResults/
 
 ## Others
 *.vsix
+.vercel
+.env*
