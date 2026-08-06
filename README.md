@@ -1,11 +1,29 @@
-# Production REST API Principles (monorepo)
+# sahith.dev
 
-This repository contains a collection of demos and articles about building production-ready REST APIs with ASP.NET Core.
+Premium portfolio and engineering hub for Sahith Basani, Senior Software Engineer.
 
-Primary contents:
+## Stack
 
-- production-rest-api-principles/ — sample project and article covering API design principles, OpenAPI, tests, and CI/CD.
+- Next.js 15
+- React 19
+- TypeScript
+- Responsive custom CSS
+- Vercel-ready deployment
 
-See production-rest-api-principles/README.md for details on how to run the sample and the included guidance.
+## Local development
 
-Author: Sahith Basani
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Production
+
+```bash
+npm run build
+npm start
+```
+
+The site is designed for deployment on Vercel and connection to the custom domain `sahith.dev`.
