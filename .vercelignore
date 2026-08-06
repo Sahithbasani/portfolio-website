@@ -1,0 +1,4 @@
+/production-rest-api-principles/
+node_modules/
+.next/
+coverage/
