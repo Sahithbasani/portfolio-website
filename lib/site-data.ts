@@ -21,7 +21,8 @@ export const nav = [
 export const experience = [
   {
     role: "Senior Software Engineer",
-    company: "Solera Holdings LLC",
+    company: "Confidential enterprise software company",
+    confidential: true,
     place: "Westlake, Texas",
     dates: "April 2026 - Present",
     focus: [
