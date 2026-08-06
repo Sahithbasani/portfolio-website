@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -54,39 +55,55 @@ export default function Home() {
   return (
     <>
       <section className="hero shell">
-        <div className="eyebrow">
-          Senior Software Engineer · {site.location}
+        <div className="hero-copy">
+          <div className="eyebrow">
+            Senior Software Engineer · {site.location}
+          </div>
+          <h1>
+            Engineering reliable software that scales with{" "}
+            <span>people, products, and platforms.</span>
+          </h1>
+          <p className="lead">
+            I build backend systems, cloud platforms, and automated delivery
+            workflows with C#, .NET, Azure, AWS, Kubernetes, and infrastructure
+            as code.
+          </p>
+          <div className="actions">
+            <Link className="button" href="/projects">
+              Explore my work <ArrowRight size={17} />
+            </Link>
+            <a
+              className="button ghost"
+              href={site.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github size={17} /> View GitHub
+            </a>
+            <Link className="button ghost" href="/contact">
+              Contact
+            </Link>
+          </div>
+          <div className="availability">
+            <i />
+            Open to conversations about senior backend, cloud, and platform
+            engineering
+          </div>
         </div>
-        <h1>
-          Engineering reliable software that scales with{" "}
-          <span>people, products, and platforms.</span>
-        </h1>
-        <p className="lead">
-          I build backend systems, cloud platforms, and automated delivery
-          workflows with C#, .NET, Azure, AWS, Kubernetes, and infrastructure as
-          code.
-        </p>
-        <div className="actions">
-          <Link className="button" href="/projects">
-            Explore my work <ArrowRight size={17} />
-          </Link>
-          <a
-            className="button ghost"
-            href={site.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github size={17} /> View GitHub
-          </a>
-          <Link className="button ghost" href="/contact">
-            Contact
-          </Link>
-        </div>
-        <div className="availability">
-          <i />
-          Open to conversations about senior backend, cloud, and platform
-          engineering
-        </div>
+        <figure className="portrait-frame hero-portrait">
+          <Image
+            src="/sahith-basani.jpg"
+            alt="Portrait of Sahith Basani"
+            width={1086}
+            height={1448}
+            sizes="(max-width: 900px) 75vw, 32vw"
+            priority
+          />
+          <figcaption>
+            <span>Sahith Basani</span>
+            <span>Dallas-Fort Worth</span>
+          </figcaption>
+        </figure>
       </section>
       <section className="shell section">
         <SectionHeading

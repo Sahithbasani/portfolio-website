@@ -7,6 +7,7 @@ const config = [
       ".next/**",
       "node_modules/**",
       ".vercel/**",
+      "next-env.d.ts",
       "production-rest-api-principles/**",
     ],
   },

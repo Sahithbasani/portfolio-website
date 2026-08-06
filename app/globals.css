@@ -151,10 +151,14 @@ button:focus-visible {
 }
 .hero {
   min-height: 760px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.65fr);
+  align-items: center;
+  gap: clamp(42px, 6vw, 88px);
   padding: 100px 0;
+}
+.hero-copy {
+  min-width: 0;
 }
 .eyebrow {
   font-size: 0.76rem;
@@ -172,6 +176,55 @@ button:focus-visible {
 }
 .hero h1 span {
   color: var(--muted);
+}
+.hero h1 {
+  font-size: clamp(3.35rem, 6.2vw, 6.4rem);
+}
+.portrait-frame {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-portrait {
+  transform: rotate(1.4deg);
+}
+.hero-portrait img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.portrait-frame figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+.portrait-frame figcaption span:first-child {
+  color: var(--text);
+  font-weight: 700;
+}
+.about-profile {
+  display: grid;
+  gap: 16px;
+}
+.about-profile > img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 24%;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
 }
 .lead {
   max-width: 780px;
@@ -524,6 +577,14 @@ button:focus-visible {
   color: var(--muted);
 }
 @media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-portrait {
+    width: min(430px, 82vw);
+    justify-self: center;
+    transform: none;
+  }
   .nav nav {
     display: none;
   }

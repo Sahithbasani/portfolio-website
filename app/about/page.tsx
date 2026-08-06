@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactCTA, PageHero, SectionHeading } from "@/components/site-shell";
 import { skillGroups } from "@/lib/site-data";
 export const metadata: Metadata = {
@@ -26,16 +27,25 @@ export default function About() {
             understand.
           </p>
         </div>
-        <div className="card">
-          <div className="metric-label">Engineering philosophy</div>
-          <h3>
-            Explicit contracts. Reusable delivery. Observable systems.
-            Reversible releases.
-          </h3>
-          <p>
-            Architecture earns its keep when it reduces ambiguity for the people
-            building, reviewing, operating, and evolving a system.
-          </p>
+        <div className="about-profile">
+          <Image
+            src="/sahith-basani.jpg"
+            alt="Sahith Basani, Senior Software Engineer"
+            width={1086}
+            height={1448}
+            sizes="(max-width: 900px) 100vw, 45vw"
+          />
+          <div className="card">
+            <div className="metric-label">Engineering philosophy</div>
+            <h3>
+              Explicit contracts. Reusable delivery. Observable systems.
+              Reversible releases.
+            </h3>
+            <p>
+              Architecture earns its keep when it reduces ambiguity for the
+              people building, reviewing, operating, and evolving a system.
+            </p>
+          </div>
         </div>
       </section>
       <section className="shell section">
